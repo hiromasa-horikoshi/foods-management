@@ -1,0 +1,18 @@
+<div class="message">
+  <div class="upper-message">
+    <div class="message-user">
+      <%= video.user.name %>
+    </div>
+    <div class="message-date">
+      <%= l video.created_at %>
+    </div>
+  </div>
+  <div class="lower-message">
+    <div class="message-content">
+      <%= video.content %>
+    </div>
+    <% if video.video.attached? %>
+      <video src="<%= rails_blob_path(video.video) %>" type="video/mp4" controls loop class='message-image'></video>
+    <% end %>
+  </div>
+</div>
