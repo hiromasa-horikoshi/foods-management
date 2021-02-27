@@ -1,0 +1,32 @@
+<div class='chat-room-form'>
+  <h1>新規コミュニティー</h1>
+  <%=form_with model: @community, local: true do |f|%>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :コミュニティーを作成, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'コミュニティー名を入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <label class='chat-room-form__label'>コミュニティーを選択</label>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <select name="community[user_ids][]">
+          <option value="">ユーザーを選択してください</option>
+          <% User.where.not(id: current_user.id).each do |user| %>
+          <option value=<%= user.id %>><%= user.name %></option>
+          <% end %>
+        </select>
+        <input name="community[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
