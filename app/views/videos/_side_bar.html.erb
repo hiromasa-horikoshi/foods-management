@@ -1,0 +1,18 @@
+<div class="side-bar-header">
+  <div class="header-name">
+    <%= link_to current_user.name, edit_user_path(current_user.id) %>
+  </div>
+  <div class="create-room">
+    <%= link_to 'コミュニティーを作成する', new_community_path %>
+  </div>
+</div>
+
+<div class="rooms">
+  <% current_user.communities.each do |community| %>
+    <div class="room">
+      <div class="room-name">
+        <%= link_to community.name, community_videos_path(community) %>
+      </div>
+    </div>
+  <% end %>
+</div>

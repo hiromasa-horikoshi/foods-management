@@ -1,0 +1,27 @@
+<div class="wrapper grid">
+  <div class="english-description">
+    You can choose below recipes you wanna make for community members.
+  </div>
+  <div class="japanese-description">
+    コミュニティーメンバーに作る料理のレシピを御選び下さい。
+  </div>
+  <div class="menu">
+    Menu
+  </div>
+  <div class="item big-box">
+    <% @recipes["result"]["small"].each do |recipe|%>
+      <% if recipe["categoryName"].include?(params[:recipe]) %>
+      <div class="food-recipe">
+        <%= link_to recipe["categoryName"], recipe["categoryUrl"], class: "food-name" %>
+      </div>
+      <% end %>
+    <% end %>
+    <% @recipes["result"]["large"].each do |recipe|%>
+      <% if recipe["categoryName"].include?(params[:recipe]) %>
+      <div class="food-recipe">
+        <%= link_to recipe["categoryName"], recipe["categoryUrl"], class: "food-name" %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
