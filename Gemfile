@@ -54,3 +54,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails' 
 gem 'devise'
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+gem 'streamio-ffmpeg'
+gem 'active_model_serializers'
+gem 'rails-i18n'
+gem 'rakuten_web_service'
+gem 'dotenv-rails'
+gem 'gon'
+gem "aws-sdk-s3", require: false

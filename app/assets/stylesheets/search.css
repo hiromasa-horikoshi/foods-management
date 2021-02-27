@@ -1,0 +1,50 @@
+.english-description {
+  font-family: 'Italianno', cursive;
+  color: #38383b;
+  font-size: 50px;
+  color: #38383b;
+  text-align: center;
+}
+
+.japanese-description {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 20px;
+  color: #38383b;
+  text-align: center;
+}
+
+.grid {
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 700px;
+  margin: 60px auto;
+  padding: 60px;
+}
+
+.menu {
+  font-family: 'Source Serif Pro', serif;
+  color: #38383b;
+  font-size: 50px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.item {
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.food-recipe {
+  font-size: 25px;
+  font-family: 'Sawarabi Mincho', sans-serif;
+  margin-top: 25px;
+}
+
+.food-name {
+  text-decoration: none;
+}

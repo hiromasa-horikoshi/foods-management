@@ -1,0 +1,204 @@
+.main-message {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.dislike {
+  font-size: 20px;
+}
+
+.user {
+  font-size: 20px;
+  margin-top: 30px;
+  text-decoration: underline;
+}
+
+.unpalatability-name {
+  font-size: 18px;
+}
+
+.unpalatability-area {
+  width: 20%;
+  height: calc(100vh - 190px);
+  overflow: scroll;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(252, 117, 7, 0.25);
+}
+
+.chat {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
+
+.side-bar-header {
+  background-color: rgba(252, 117, 7, 0.65);
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room {
+  padding: 20px 0px 40px;
+}
+
+.chat-header {
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.messages {
+  height: calc(100vh - 190px);
+  width: 80%;
+  background-color: #fafafa;
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.form {
+  height: 90px;
+  background-color: #dddddd;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.header-name a {
+  font-size: 16px;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.create-room a {
+  font-size: 12px;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid lightblue;
+  text-decoration: none;
+}
+
+.room-name a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.rooms {
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  background-color: rgba(252, 117, 7, 0.25);
+  overflow: scroll;
+}
+
+.header-title {
+  font-size: 24px;
+  color: #333;
+  margin-top: 36px;
+}
+
+.center-header {
+  font-size: 18px;
+  color: #333;
+  margin-top: 36px;
+}
+
+.search-btn {
+  text-decoration: none;
+  font-family: FontAwesome;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid darkred;
+  background-color: rgba(252, 117, 7, 0.65);
+}
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a{
+  text-decoration: none;
+  color: darkred;
+  border: 1px solid darkred;
+  padding: 10px;
+}
+
+.message {
+  margin: 10px 0 0 0;
+}
+
+.message-content {
+  margin-bottom: 40px;
+  font-size: 14px;
+  color: #434a54;
+}
+
+.upper-message {
+  display: flex;
+}
+
+.message-user {
+  color: #434A54;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.form-input {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+}
+
+.form-message {
+  height: 50px;
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+}
+
+.form-submit {
+  color: #ffffff;
+  font-size: 16px;
+  background-color: rgba(252, 117, 7, 0.85);
+  padding: 0 20px;
+  margin-left: 15px;
+  height: 50px;
+  border: none;
+}
+
+.form-image {
+  font-size: 12px;
+  color: #ffffff;
+  background-color: rgba(241, 133, 44, 0.85);
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.message-image {
+  width: 240px;
+  height: 135px;
+}
+
+.hidden {
+  display: none;
+}
