@@ -5,6 +5,7 @@
     </div>
   </div>
   <div class="center-header">
+    <div class="invalid-feedback">＊料理を食べられないメンバーがいます。</div>
     <%= form_with url: search_communities_path, method: :get, local: true do |form|%>
       <%= form.text_field :recipe, class: "recipe", placeholder: "レシピを検索" %>
       <button type="submit" class="search-btn">
@@ -14,6 +15,7 @@
     <!-- Rakuten Web Services Attribution Snippet FROM HERE -->
     <a href="https://webservice.rakuten.co.jp/" target="_blank"><img src="https://webservice.rakuten.co.jp/img/credit/200709/credit_22121.gif" border="0" alt="楽天ウェブサービスセンター" title="楽天ウェブサービスセンター" width="221" height="21" class="rakuten"/></a>
     <!-- Rakuten Web Services Attribution Snippet TO HERE -->
+    
   </div>
   <div class="right-header">
     <div class="header-button">
@@ -35,7 +37,7 @@
     </div>
     <div class="unpalatability-name">
       <% User.where(id: @user)[0].unpalatability.each do |others_food| %>
-        <br>- <%= others_food %>
+        <br>- <span class="unpalatability-foods"><%= others_food %></span>
       <% end %>
     </div>
     <div class="user">
@@ -43,7 +45,7 @@
     </div>
     <div class="unpalatability-name">
       <% current_user.unpalatability.each do |current_user_food| %>
-        <br>- <%= current_user_food %>
+        <br>- <span class="unpalatability-foods"><%= current_user_food %></span>
       <% end %>
     </div>
   </div>
@@ -59,3 +61,31 @@
   </div>
   <%= f.submit '送信', class: 'form-submit' %>
 <% end %>
+
+<script>
+  $(function() {
+    const unpalatabilityFoods = $('.unpalatability-foods').get();
+    const unitsUnpalatability = unpalatabilityFoods.length;
+    $('.center-header').submit(function(e) {
+      let inputValue = $('.recipe').val();
+      for (let m=0; m<unitsUnpalatability; m++) {
+        if (inputValue.includes(unpalatabilityFoods[m].innerHTML)) {
+          e.preventDefault();
+          $('.invalid-feedback').addClass('is-invalid');
+        };
+      };
+    });
+    
+    $('.recipe').keyup(function() {
+      let inputValue = $('.recipe').val();
+      for (let n=0; n<unitsUnpalatability; n++) {
+        if (!inputValue.includes(unpalatabilityFoods[n].innerHTML)) {
+          $('.invalid-feedback').removeClass('is-invalid');
+        } else {
+          $('.invalid-feedback').addClass('is-invalid');
+          break;
+        };
+      };
+    });
+  });
+</script>

@@ -109,13 +109,32 @@
 .center-header {
   font-size: 18px;
   color: #333;
-  margin-top: 36px;
+  margin-top: 15px;
+}
+
+.invalid-feedback {
+  font-size: 15px;
+  opacity: 0;
+}
+
+.is-invalid {
+  font-size: 15px;
+  color: red;
+  opacity: 1.0;
+}
+
+.recipe {
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid #000;
 }
 
 .search-btn {
+  height: 25px;
+  border-radius: 3px;
   text-decoration: none;
   font-family: FontAwesome;
-  font-size: 18px;
+  font-size: 15px;
   color: #fff;
   border: 1px solid darkred;
   background-color: rgba(252, 117, 7, 0.65);
@@ -186,6 +205,7 @@
   margin-left: 15px;
   height: 50px;
   border: none;
+  border-radius: 5px;
 }
 
 .form-image {
@@ -195,6 +215,7 @@
   padding: 12px;
   width: 60px;
   margin: 5px 10px;
+  border-radius: 5px;
   text-align: center;
 }
 

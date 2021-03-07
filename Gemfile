@@ -66,4 +66,5 @@ gem 'rails-i18n'
 gem 'rakuten_web_service'
 gem 'dotenv-rails'
 gem 'gon'
+gem "jquery-rails"
 gem "aws-sdk-s3", require: false
